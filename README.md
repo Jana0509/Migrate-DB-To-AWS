@@ -21,3 +21,18 @@ It is a managed migration and replication service that helps move your database 
 
 
 ## Steps Taken:
+1. Created the On-prem Environment using Cloudformation template which provisions the Webserver and DB server in EC2 Instances.
+2. Create the AWS VPC from the stractch having multiple Availability zone for creating High Availability and Resilence Solution.
+3. Spinned up the EC2 instances in the public subnets of both the availability zones.
+4. In order to Create the Connection between on-prem and AWS Cloud, Created the VPC peering between two VPCs which are On-prem VPC and AWS VPC and configured the route tables for the traffic between the VPCs.
+5. Provisioned the RDS Database of Maria DB engine and enabled Multi-AZ for high Availability and fault tolerant.
+6. Created the DMS Instance which migrates the Data from On-prem DB server to Instance, before this step, created the source and destination endpoint of DB.
+7. Once Replication instances are created, create the Dtabase Migration tasks, This starts the replication task and does a full load from catdbonpremises to the RDS Instance.It will create the task then start the task then it will be in the Running State until it moves into Load complete. At this point the data has been migrated into the RDS instance
+8. Cut Over the application instance to call the RDS instance.
+
+## **Re-platform- AWS Database Migration Service(DMS)**
+1. Created a new managed database, using Amazon Relational Database Service (RDS)
+2. Created an AWS Database Migration Service (DMS) Replication Instance - that allows you to replicate data between databases
+3. Created the source and target DMS Endpoints
+4. Modified the configuration of the source database to allow for continuous replication of data (binary log)
+5. Started the replication of data through a DMS replication task
