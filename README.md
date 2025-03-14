@@ -18,6 +18,8 @@ Migrated the application to a highly available, well-architected VPC in AWS, spa
 ## AWS Services Involved:
 **Database Migration Service(DMS):**
 It is a managed migration and replication service that helps move your database and analytics workloads to AWS quickly, securely, and with minimal downtime and zero data loss. AWS DMS supports migration between 20-plus database and analytics engines, covering homogeneous (ex. MySQL to MySQL) or heterogeneous (Oracle to PostgreSQL) use cases, and single or continuous replication mode. Here, In this Project, we are replatforming the homogeneous data from on-prem to AWS CLOUD using Single replication mode.
+![GetImage (5)](https://github.com/user-attachments/assets/bc17edc1-30f4-43ac-a7fd-6906fa31ffc9)
+
 
 
 ## Steps Taken:
