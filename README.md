@@ -34,5 +34,8 @@ It is a managed migration and replication service that helps move your database 
 1. Created a new managed database, using Amazon Relational Database Service (RDS)
 2. Created an AWS Database Migration Service (DMS) Replication Instance - that allows you to replicate data between databases
 3. Created the source and target DMS Endpoints
-4. Modified the configuration of the source database to allow for continuous replication of data (binary log)
-5. Started the replication of data through a DMS replication task
+4. Started the replication of data through a DMS replication task
+
+
+## Conclusion:
+This Project teaches how to migrate the on-prem workloads such as application layer and database layer to the AWS cloud by providing High RTO and RPO. By leveraging DMS and other Services we are able to move the workload in ease.
